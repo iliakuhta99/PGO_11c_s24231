@@ -6,26 +6,21 @@ import java.util.List;
 class Character {
     Location location;
     String name;
-    private int health = 100;
-    private static List<Character> chara = new ArrayList<>();
+    int health = 100;
+
     private static ArrayList<Character> target = new ArrayList<>();
+    private static List<Character> char1 = new ArrayList<>();
 
     public Character(String name, Location location) {
         this.name = name;
         this.location = location;
         this.health=health;
     }
-
-    public void setLocation(Location location) {
-        this.location = location;
-    }
-
-    public Location getLocation() {
-        return location;
-    }
-
     public String getName() {
         return name;
+    }
+    public Location getLocation() {
+        return location;
     }
     public int getHealth() {
         return health;
@@ -49,11 +44,9 @@ class Character {
         target.add(character);
     }
 
-
-
     public static void status(){
         System.out.println("__Status__");
-        for(Character character : chara)
+        for(Character character : char1)
             System.out.println(character.getName() + " : " + character.getHealth());
         System.out.println("____");
     }

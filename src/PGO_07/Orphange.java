@@ -4,16 +4,18 @@ import java.util.ArrayList;
 import java.util.List;
 
 class Orphanage {
+    private List<Child> childrens = new ArrayList<>();
     private String name;
     private Location location;
-    private List<Child> childs = new ArrayList<>();
+
 
     public Orphanage(String name, Location location) {
-        this.name = name;
         this.location = location;
+        this.name = name;
+
     }
     public void addChild(Child child){
-        childs.add(child);
+        childrens.add(child);
     }
     public String getName() {
         return name;
